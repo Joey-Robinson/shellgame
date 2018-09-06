@@ -15,7 +15,7 @@ cards.forEach(card => {
     card.classList.toggle("back");
     // const cardBack = card;
     // const content = card.style.display = "none";
-    if (!card.innerText) {
+    if (card.textContent !== card.innerText) {
       card.style.display = "none";
     } else {
       console.log("hi");
