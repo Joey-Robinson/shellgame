@@ -1,27 +1,27 @@
-// const cards = document.querySelectorAll('.card');
-// for (let i = 0; i < cards.length; i++) {
-//   const target = Math.floor(Math.random() * cards.length - 1) + 1;
-//   const targetTwo = Math.floor(Math.random() * cards.length - 1) + 1;
-//   cards.index(target).before(cards.index(targetTwo));
-// }
+// Selecting all classes with .card
 
-// const load = () => {
-//   const cards = document.querySelectorAll('.card');
-//   const cardContainer = document.getElementById('cardContainer').clientHeight;
-// }
-// window.onload = load;
+// Going over each with forEach
 
-// const rotate = () => {
-//   console.log('fuck you')
-// }
-const cards = document.querySelectorAll('.card')
-// .addEventListener('click', rotate);
-cards.forEach((card) => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('back')
-  })
-})
+// Adding an eventListener('click') to the forEach method.
+// Each .card has a toggle on it for the .back class (see: style.css)
 
+// Adding an if statement. if the innerText isn't the same (see: .one && .two)
+// The card will remain, if it is the same, it will simply toggle.
+
+//
+const cards = document.querySelectorAll(".card");
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("back");
+    // const cardBack = card;
+    // const content = card.style.display = "none";
+    if (!card.innerText) {
+      card.style.display = "none";
+    } else {
+      console.log("hi");
+    }
+  });
+});
 
 // Does not work w/ CSS Grid
 $(function () {
