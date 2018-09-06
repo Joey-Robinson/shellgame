@@ -11,6 +11,18 @@
 // }
 // window.onload = load;
 
+// const rotate = () => {
+//   console.log('fuck you')
+// }
+var cards = document.querySelectorAll('.card')
+// .addEventListener('click', rotate);
+cards.forEach((card) => {
+  card.addEventListener('click', () => {
+    console.log('fuck you')
+  })
+})
+
+
 // Does not work w/ CSS Grid
 $(function () {
   var parent = $(".cards");
