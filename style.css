@@ -42,6 +42,7 @@ body {
   width: 40rem;
   height: 20rem;
   text-align: center;
+  transition: all .5s ease-in-out;
 }
 
 .one {
@@ -138,4 +139,10 @@ body {
   background: mediumseagreen;
   grid-column: 4;
   grid-row: 4;
+}
+
+.back {
+  background: rgb(27, 17, 68);
+  color: white;
+  transition: all .5s ease-in-out;
 }
