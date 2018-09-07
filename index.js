@@ -13,10 +13,8 @@ const cards = document.querySelectorAll(".card");
 cards.forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("back");
-    // const cardBack = card;
-    // const content = card.style.display = "none";
-    if (card.textContent !== card.innerText) {
-      card.style.display = "none";
+    if (card.textContent != card.innerText) {
+      card.classList.toggle("selected");
     } else {
       console.log("hi");
     }

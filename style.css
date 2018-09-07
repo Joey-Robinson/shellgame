@@ -153,6 +153,6 @@ img {
   transition: all .5s ease-in-out;
 }
 
-.test {
-  background: #000;
+.selected {
+  border: 5px solid yellow;
 }
