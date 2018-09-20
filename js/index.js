@@ -53,7 +53,8 @@ const layout = document.createElement('section');
 layout.setAttribute('class', 'primary');
 shellGame.appendChild(layout);
 
-cardsArray.forEach((item) => {
+let moreTurtles = cardsArray.concat(cardsArray);
+moreTurtles.forEach((item) => {
   const card = document.createElement('div');
   card.classList.add('turtles');
   card.dataset.name = item.name;
