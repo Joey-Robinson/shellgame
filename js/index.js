@@ -1,49 +1,62 @@
 const cardsArray = [{
     'name': 'turtleone',
-    'img': '../images/trutleone.jpg',
+    'img': '../images/turtleone.jpg',
   },
   {
     'name': 'turtletwo',
-    'img': '../images/trutletwo.jpg',
+    'img': '../images/turtletwo.jpg',
   },
   {
     'name': 'turtlethree',
-    'img': '../images/trutlethree.jpg',
+    'img': '../images/turtlethree.jpg',
   },
   {
     'name': 'turtlefour',
-    'img': '../images/trutlefour.jpg',
+    'img': '../images/turtlefour.jpg',
   },
   {
     'name': 'turtlefive',
-    'img': '../images/trutlefive.jpg',
+    'img': '../images/turtlefive.jpg',
   },
   {
     'name': 'turtlesix',
-    'img': '../images/trutlesix.jpg',
+    'img': '../images/turtlesix.jpg',
   },
   {
     'name': 'turtleseven',
-    'img': '../images/trutleseven.jpg',
+    'img': '../images/turtleseven.jpg',
   },
   {
     'name': 'turtleeight',
-    'img': '../images/trutleeight.jpg',
+    'img': '../images/turtleeight.jpg',
   },
   {
     'name': 'turtlenine',
-    'img': '../images/trutlenine.jpg',
+    'img': '../images/turtlenine.jpg',
   },
   {
     'name': 'turtleten',
-    'img': '../images/trutleten.jpg',
+    'img': '../images/turtleten.jpg',
   },
   {
     'name': 'turtleeleven',
-    'img': '../images/trutleeleven.jpg',
+    'img': '../images/turtleeleven.jpg',
   },
   {
     'name': 'turtletwelve',
-    'img': '../images/trutletwelve.jpg',
+    'img': '../images/turtletwelve.jpg',
   },
 ];
+
+const shellGame = document.getElementById('shellGame');
+const layout = document.createElement('section');
+layout.setAttribute('class', 'primary');
+shellGame.appendChild(layout);
+
+cardsArray.forEach((item) => {
+  const card = document.createElement('div');
+  card.classList.add('turtles');
+  card.dataset.name = item.name;
+  card.style.backgroundImage = `url(${item.img})`;
+  layout.appendChild(card);
+});

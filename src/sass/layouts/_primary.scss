@@ -1,5 +1,7 @@
 .primary {
-  display: grid;
+  max-width: 96rem;
   margin: 0 auto;
-  grid-template-columns: repeat(autofill, minmax(15rem, 15rem));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
