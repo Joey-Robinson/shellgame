@@ -99,7 +99,11 @@ const resetTurtle = () => {
 
 shellGame.addEventListener("click", event => {
   let turtleClick = event.target;
-  if (turtleClick.nodeName === "section" || turtleClick === previousTurtle) {
+  if (
+    turtleClick.nodeName === "SECTION" ||
+    turtleClick === previousTurtle ||
+    turtleClick.parentNode.classList.contains("clickedturtle")
+  ) {
     return;
   }
   turtleClick.classList.add("clickedturtle");

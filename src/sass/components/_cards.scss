@@ -7,5 +7,13 @@
 }
 
 .turtleFront {
-  background: #fab942 url('../images/turtleBack.png') no-repeat center center / contain;
+  background: #fab942 url(../../images/turtleBack.png) no-repeat center center / contain;
+}
+
+.turtleBack {
+  transform: rotateY(180deg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
