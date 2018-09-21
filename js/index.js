@@ -64,13 +64,52 @@ moreTurtles.forEach((item) => {
   layout.appendChild(card);
 });
 
+let pause = 1200;
 let count = 0;
-layout.addEventListener('click', (event) => {
-  const turtleClick = event.target;
-  if (turtleClick.nodeName === 'SECTION') return;
+let guessOne = '';
+let guessTwo = '';
+let previousTurtle = null;
+
+const matchTurtle = () => {
+  const selected = document.querySelectorAll('.clickedturtle');
+  selected.forEach((card) => {
+    card.classList.add('matchingturtles');
+  });
+};
+
+const resetTurtle = () => {
+  guessOne = '';
+  guessTwo = '';
+  count = 0;
+  const selectedTurtle = document.querySelectorAll('.clickedturtle');
+  selectedTurtle.forEach((turtleCard) => {
+    turtleCard.classList.remove('clickedturtle');
+  });
+};
+
+shellGame.addEventListener('click', (event) => {
+  let turtleClick = event.target;
+  if (turtleClick.nodeName === 'section' || turtleClick === previousTurtle) {
+    return;
+  }
   turtleClick.classList.add('clickedturtle');
   if (count < 2) {
     count++;
-    turtleClick.classList.add('clickedturtle');
-  }
-})
+    if (count === 1) {
+      guessOne = turtleClick.dataset.name;
+      turtleClick.classList.add('clickedturtle');
+    } else {
+      guessTwo = turtleClick.dataset.name;
+      turtleClick.classList.add('clickedturtle');
+    };
+    if (guessOne !== '' && guessTwo !== '') {
+      if (guessOne === guessTwo) {
+        setTimeout(matchTurtle, pause);
+        setTimeout(resetTurtle, pause);
+      } else {
+        setTimeout(resetTurtle, pause);
+      }
+    };
+    previousTurtle = turtleClick;
+  };
+});
