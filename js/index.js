@@ -4,47 +4,47 @@ const cardsArray = [{
   },
   {
     name: "turtletwo",
-    img: "../images/turtletwo.jpg"
+    img: "./images/turtletwo.jpg"
   },
   {
     name: "turtlethree",
-    img: "../images/turtlethree.jpg"
+    img: "./images/turtlethree.jpg"
   },
   {
     name: "turtlefour",
-    img: "../images/turtlefour.jpg"
+    img: "./images/turtlefour.jpg"
   },
   {
     name: "turtlefive",
-    img: "../images/turtlefive.jpg"
+    img: "./images/turtlefive.jpg"
   },
   {
     name: "turtlesix",
-    img: "../images/turtlesix.jpg"
+    img: "./images/turtlesix.jpg"
   },
   {
     name: "turtleseven",
-    img: "../images/turtleseven.jpg"
+    img: "./images/turtleseven.jpg"
   },
   {
     name: "turtleeight",
-    img: "../images/turtleeight.jpg"
+    img: "./images/turtleeight.jpg"
   },
   {
     name: "turtlenine",
-    img: "../images/turtlenine.jpg"
+    img: "./images/turtlenine.jpg"
   },
   {
     name: "turtleten",
-    img: "../images/turtleten.jpg"
+    img: "./images/turtleten.jpg"
   },
   {
     name: "turtleeleven",
-    img: "../images/turtleeleven.jpg"
+    img: "./images/turtleeleven.jpg"
   },
   {
     name: "turtletwelve",
-    img: "../images/turtletwelve.jpg"
+    img: "./images/turtletwelve.jpg"
   }
 ];
 const moreTurtles = cardsArray.concat(cardsArray).sort(() => 0.5 - Math.random());
