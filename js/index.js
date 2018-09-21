@@ -28,7 +28,7 @@ const cardsArray = [{
   },
   {
     name: "turtleeight",
-    img: "shellgame/images/turtleeight.jpg"
+    img: "../images/turtleeight.jpg"
   },
   {
     name: "turtlenine",
@@ -71,7 +71,7 @@ moreTurtles.forEach(item => {
 
   const turtleBack = document.createElement("div");
   turtleBack.classList.add("turtleBack");
-  turtleBack.style.backgroundImage = `url(${img})`;
+  turtleBack.style.backgroundImage = `url(${item.img})`;
 
   const card = document.createElement("div");
   card.classList.add("turtles");
