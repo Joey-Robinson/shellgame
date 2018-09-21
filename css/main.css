@@ -50,6 +50,8 @@ body {
 /* The result after clicking two matching cards */
 .matchingturtles .turtleFront {
   background: transparent;
+  /* border: 5px solid yellow; */
+  /* This border can be changed, I left it off */
 }
 
 /* The cards themselves */
