@@ -54,6 +54,8 @@ layout.setAttribute('class', 'primary');
 shellGame.appendChild(layout);
 
 let moreTurtles = cardsArray.concat(cardsArray);
+moreTurtles.sort(() => 0.5 - Math.random());
+
 moreTurtles.forEach((item) => {
   const card = document.createElement('div');
   card.classList.add('turtles');
@@ -61,3 +63,14 @@ moreTurtles.forEach((item) => {
   card.style.backgroundImage = `url(${item.img})`;
   layout.appendChild(card);
 });
+
+let count = 0;
+layout.addEventListener('click', (event) => {
+  const turtleClick = event.target;
+  if (turtleClick.nodeName === 'SECTION') return;
+  turtleClick.classList.add('clickedturtle');
+  if (count < 2) {
+    count++;
+    turtleClick.classList.add('clickedturtle');
+  }
+})

@@ -15,6 +15,9 @@ body {
   font-weight: 300;
   line-height: 1.6; }
 
+.clickedturtle {
+  border: 5px dotted black; }
+
 .turtles {
   margin: 5px;
   background-color: #909075;
