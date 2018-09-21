@@ -28,7 +28,7 @@ const cardsArray = [{
   },
   {
     name: "turtleeight",
-    img: "../images/turtleeight.jpg"
+    img: "shellgame/images/turtleeight.jpg"
   },
   {
     name: "turtlenine",
