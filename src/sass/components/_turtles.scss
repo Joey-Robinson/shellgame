@@ -6,4 +6,8 @@
   background-position: center;
   height: 15rem;
   width: 15rem;
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
 }

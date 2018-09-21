@@ -58,15 +58,20 @@ let moreTurtles = cardsArray.concat(cardsArray);
 moreTurtles.sort(() => 0.5 - Math.random());
 
 moreTurtles.forEach(item => {
-  const card = document.createElement("div");
   const turtleFront = document.createElement("div");
   turtleFront.classList.add("turtleFront");
+
   const turtleBack = document.createElement("div");
   turtleBack.classList.add("turtleBack");
+  turtleBack.style.backgroundImage = `url(${item.img})`;
+
+  const card = document.createElement("div");
   card.classList.add("turtles");
   card.dataset.name = item.name;
-  card.style.backgroundImage = `url(${item.img})`;
+
   layout.appendChild(card);
+  card.appendChild(turtleFront);
+  card.appendChild(turtleBack);
 });
 
 let pause = 1200;
@@ -101,11 +106,13 @@ shellGame.addEventListener("click", event => {
   if (count < 2) {
     count++;
     if (count === 1) {
-      guessOne = turtleClick.dataset.name;
-      turtleClick.classList.add("clickedturtle");
+      guessOne = turtleClick.parentNode.dataset.name;
+      console.log(guessOne);
+      turtleClick.parentNode.classList.add("clickedturtle");
     } else {
-      guessTwo = turtleClick.dataset.name;
-      turtleClick.classList.add("clickedturtle");
+      guessTwo = turtleClick.parentNode.dataset.name;
+      console.log(guessTwo);
+      turtleClick.parentNode.classList.add("clickedturtle");
     }
     if (guessOne !== "" && guessTwo !== "") {
       if (guessOne === guessTwo) {
