@@ -71,7 +71,7 @@ moreTurtles.forEach(item => {
 
   const turtleBack = document.createElement("div");
   turtleBack.classList.add("turtleBack");
-  turtleBack.style.backgroundImage = `url(${item.img})`;
+  turtleBack.style.backgroundImage = `url(${img})`;
 
   const card = document.createElement("div");
   card.classList.add("turtles");
