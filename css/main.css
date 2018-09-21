@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background: #222;
+  color: white;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+/* Setting the attributes of all cards. */
+.turtles,
+.turtleFront,
+.turtleBack {
+  position: absolute;
+  backface-visibility: hidden;
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Front of the card with a shared icon across all cards */
+.turtleFront {
+  background: #ad9465 url(../../images/turtleBack.png) no-repeat center center/contain;
+}
+
+/* This is the image on each card. background-size was changed from contain to cover */
+.turtleBack {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rotating the cards visibility */
+.clickedturtle {
+  transform: rotateY(180deg);
+}
+
+/* The result after clicking two matching cards */
+.matchingturtles .turtleFront {
+  background: transparent;
+}
+
+/* The cards themselves */
+.turtles {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+/* Layout for the Cards */
+.primary {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
