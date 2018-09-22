@@ -31,7 +31,7 @@ body {
 
 /* Front of the card with a shared icon across all cards */
 .turtleFront {
-  background: #ad9465 url(./images/turtleback.png) no-repeat center center/contain; 
+  background: #ad9465 url('../images/turtleback.png') no-repeat center center/contain; 
 }
 
 /* This is the image on each card. background-size was changed from contain to cover */
