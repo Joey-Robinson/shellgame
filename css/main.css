@@ -30,10 +30,10 @@ body {
 }
 
 /* Front of the card with a shared icon across all cards */
-.turtlefront {
+.turtleFront {
   background: #ad9465;
   background-size: contain;
-  background-image: url('../images/turtleback.png');
+  background-image: url('../../images/turtleback.png');
   background-repeat: no-repeat;
   background-position: center center;
 }

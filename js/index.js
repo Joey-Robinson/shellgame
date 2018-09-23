@@ -67,7 +67,7 @@ moreTurtles.forEach(item => {
   } = item;
 
   const turtleFront = document.createElement("div");
-  turtleFront.classList.add("turtlefront");
+  turtleFront.classList.add("turtleFront");
 
   const turtleBack = document.createElement("div");
   turtleBack.classList.add("turtleBack");
