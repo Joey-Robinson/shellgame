@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background: #222;
-  color: white;
+  background: white;
+  color: #222;
   font-weight: 300;
   line-height: 1.6;
   margin: 2rem 0;
